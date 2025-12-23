@@ -570,6 +570,11 @@ bool Theme::spacesAreCalledFolders() const
     return false;
 }
 
+QString Theme::footerCopyrightText() const
+{
+    return tr("Copyright ownCloud GmbH (A Kiteworks Company)");
+}
+
 bool Theme::withCrashReporter() const
 {
 #ifdef WITH_CRASHREPORTER

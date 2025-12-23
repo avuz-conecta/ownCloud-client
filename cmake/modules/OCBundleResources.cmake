@@ -46,8 +46,8 @@ function(__addIcon QRC_PATH THEME ICON_NAME)
         else()
             set(SIZES "16;22;32;48;64;128;256;512;1024")
             foreach(size ${SIZES})
-                set(icon "theme/${_ICON_SRC_PATH}/${ICON_NAME}-${size}.png")
-                set(iconAlias "${APPLICATION_SHORTNAME}/theme/${THEME}/${ICON_NAME}-${size}.png")
+                set(icon "theme/${_ICON_SRC_PATH}/${size}-${ICON_NAME}.png")
+                set(iconAlias "${APPLICATION_SHORTNAME}/theme/${THEME}/${size}-${ICON_NAME}.png")
                 if (EXISTS ${OEM_THEME_DIR}/${icon})
                     __add_file_to_qrc_file(
                         QRC_PATH ${QRC_PATH}
@@ -105,7 +105,7 @@ function(generate_theme TARGET OWNCLOUD_SIDEBAR_ICONS_OUT)
         target_compile_definitions(${TARGET} PRIVATE BRANDING_AVAILABLE)
 
         # add executable icon on windows and osx
-        file(GLOB_RECURSE OWNCLOUD_SIDEBAR_ICONS "${OEM_THEME_DIR}/theme/colored/*-${APPLICATION_ICON_NAME}-sidebar.png")
+        file(GLOB_RECURSE OWNCLOUD_SIDEBAR_ICONS "${OEM_THEME_DIR}/theme/colored/*-${APPLICATION_ICON_NAME}-icon-sidebar.png")
     else()
         file(GLOB_RECURSE OWNCLOUD_SIDEBAR_ICONS "${OEM_THEME_DIR}/theme/colored/*-${APPLICATION_ICON_NAME}-icon-sidebar.png")
     endif()

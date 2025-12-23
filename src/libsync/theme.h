@@ -484,6 +484,8 @@ public:
      */
     virtual bool spacesAreCalledFolders() const;
 
+    virtual QString footerCopyrightText() const;
+
     bool withCrashReporter() const;
 
 protected:

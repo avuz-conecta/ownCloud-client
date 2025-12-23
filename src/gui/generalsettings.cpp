@@ -37,6 +37,8 @@ GeneralSettings::GeneralSettings(QWidget *parent)
 {
     _ui->setupUi(this);
 
+    _ui->copyrightLabel->setText(Theme::instance()->footerCopyrightText());
+
     connect(_ui->desktopNotificationsCheckBox, &QAbstractButton::toggled, this, &GeneralSettings::slotToggleOptionalDesktopNotifications);
 
     reloadConfig();

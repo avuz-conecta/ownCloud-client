@@ -66,7 +66,7 @@ elseif(UNIX)
     endif()
 endif()
 
-set(libsync_SRCS ${libsync_SRCS} creds/httpcredentials.cpp)
+set(libsync_SRCS ${libsync_SRCS} ${THEME_SRC} creds/httpcredentials.cpp)
 
 # These headers are installed for libowncloudsync to be used by 3rd party apps
 INSTALL(
